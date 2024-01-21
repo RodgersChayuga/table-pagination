@@ -46,3 +46,5 @@ Let's assume the third page of data is currently displayed. Clicking the next bu
 Let's assume the count value from the https://example.com/api/users?page=0 response equals 41. Clicking the last button navigates to the fifth page of data and a request to https://example.com/api/users?page=4 should be made.
 ### Example 4
 Use the animation below as a reference for your solution.
+
+![Gif image of the paginated table, as the result is expected](table-test.gif)
