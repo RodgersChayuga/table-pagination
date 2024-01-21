@@ -1,14 +1,19 @@
 Your task is to implement a React component that renders a table with pagination.
 1. The table has class name table and contains three columns: ID, First Name and Last Name. It is populated with data that can be fetched from the mocked https://example.com/api/users endpoint. The endpoint requires one query parameter: page (with zero-based numbering, if you do not provide this parameter, the API will return an error). This is an example of a response formatted using JSON:
 
-
+```
 {
 "count": 13,
 "results" : [
-( "id": 1, "firstName": "David", "lastName": "Wallace" }, { "id": 2, "firstName": "Sonia", "lastName": "Ross" },. { "id": 3, "firstName": "Anthony", "lastName": "Thomson" ›
-
+    { "id": 1, "firstName": "David", "lastName": "Wallace" },
+    { "id": 2, "firstName": "Sonia", "lastName": "Ross" },
+    { "id": 3, "firstName": "Anthony", "lastName": "Thomson"}
+]
+```
 count's value points to the total number of results, whereas results contains items from the given page. The page size equals 10. The last page of data might be smaller. If a request is sent with the query param page larger than the total number of pages, then results will be empty.
+
 2. Initially, the table tbody should be populated with the first page of data.
+
 3. The pagination section has class name pagination and consists of four buttons which are stacked horizontally.
 • Clicking the first button navigates to the first page of data, whereas clicking the second button navigates to the previous page of data. The buttons become disabled either when the current page is the first page or when a page of data is currently being loaded. The buttons have (respectively) first-page-btn and previous-page-btn class names.
 • Similarly, clicking the third button navigates to the next page of data, whereas clicking the last button navigates to the last page of data. The buttons become disabled either when the current page is the last page or when a page of data is currently being loaded. The buttons have (respectively) next-page-btn and last-page-btn class names.
@@ -20,7 +25,7 @@ count's value points to the total number of results, whereas results contains it
 7. Please remember to use tbody when rendering data.
 
 ### Assumptions
-• Only one import is allowed: react (v17.0.2). It is at the top of the starting code.
+• Only one import is allowed: `react (v17.0.2)`. It is at the top of the starting code.
 
 • https://example.com is a mocked service - it can be accessed only in the Codility Ul.
 
